@@ -1,41 +1,106 @@
+# Nav2 Basic Configuration File
+# Contains essential parameters for BT Navigator, controllers, planners, and costmaps
+# This is a simplified configuration suitable for initial testing
+
+# ============================================================================
+# BT Navigator Configuration
+# The behavior tree navigator orchestrates navigation by coordinating
+# the planner, controller, and recovery behaviors using behavior trees
+# ============================================================================
 bt_navigator:
   ros__parameters:
+    # Synchronize with Gazebo simulation time
     use_sim_time: True
+
+    # Reference frame for navigation goals and global planning
+    # 'map' frame is provided by SLAM and never moves
     global_frame: map
+
+    # Robot's base frame for local planning and control
+    # All robot-centric calculations use this frame
     robot_base_frame: base_link
+
+    # Maximum time (seconds) to wait for transforms between frames
+    # Prevents hanging if TF tree has breaks or delays
     transform_tolerance: 0.2
 
+# ============================================================================
+# Controller Server Configuration
+# Executes local trajectory tracking to follow the global plan
+# DWB (Dynamic Window Approach) generates and scores velocity commands
+# ============================================================================
 controller_server:
   ros__parameters:
     use_sim_time: True
-    controller_frequency: 10.0
-    FollowPath:
-      plugin: "dwb_core::DWBLocalPlanner"
-      min_vel_x: 0.0
-      min_vel_y: 0.0
-      max_vel_x: 0.22
-      max_vel_y: 0.0
-      max_vel_theta: 1.0
-      min_speed_xy: 0.0
-      max_speed_xy: 0.22
-      min_speed_theta: 0.0
-      acc_lim_x: 2.5
-      acc_lim_y: 0.0
-      acc_lim_theta: 3.2
-      decel_lim_x: -2.5
-      decel_lim_y: 0.0
-      decel_lim_theta: -3.2
 
+    # How often the controller generates new velocity commands (Hz)
+    # 10 Hz = every 100ms, good balance for TurtleBot3
+    controller_frequency: 10.0
+
+    # FollowPath plugin configuration
+    # This is the main local planner that generates /cmd_vel commands
+    FollowPath:
+      # Use Dynamic Window Approach local planner
+      # DWB samples velocity space and scores trajectories
+      plugin: "dwb_core::DWBLocalPlanner"
+
+      # Velocity limits (m/s and rad/s)
+      # TurtleBot3 Burger has max speed of 0.22 m/s
+      min_vel_x: 0.0        # Cannot reverse (set to -0.22 to allow backing up)
+      min_vel_y: 0.0        # No lateral movement (differential drive)
+      max_vel_x: 0.22       # Maximum forward velocity
+      max_vel_y: 0.0        # No lateral movement
+      max_vel_theta: 1.0    # Maximum rotational velocity (rad/s)
+
+      # Speed limits (combined linear and angular)
+      min_speed_xy: 0.0     # Minimum combined XY speed
+      max_speed_xy: 0.22    # Maximum combined XY speed
+      min_speed_theta: 0.0  # Minimum rotation speed
+
+      # Acceleration limits (m/s² and rad/s²)
+      # Limits how quickly velocity can change between control cycles
+      acc_lim_x: 2.5        # Linear acceleration limit
+      acc_lim_y: 0.0        # No Y acceleration (differential drive)
+      acc_lim_theta: 3.2    # Angular acceleration limit
+
+      # Deceleration limits (negative acceleration)
+      # How quickly the robot can slow down
+      decel_lim_x: -2.5     # Linear deceleration limit
+      decel_lim_y: 0.0      # No Y deceleration
+      decel_lim_theta: -3.2 # Angular deceleration limit
+
+# ============================================================================
+# Planner Server Configuration
+# Generates global paths from robot's current position to goal
+# NavFn uses Dijkstra's or A* algorithm on the costmap grid
+# ============================================================================
 planner_server:
   ros__parameters:
     use_sim_time: True
+
+    # List of planner plugins available (can have multiple)
     planner_plugins: ["GridBased"]
+
     GridBased:
+      # NavFn planner uses grid-based search algorithms
       plugin: "nav2_navfn_planner/NavfnPlanner"
+
+      # Goal tolerance: how close to goal position the path must end (meters)
+      # 0.5m allows for some flexibility in final position
       tolerance: 0.5
+
+      # Use A* algorithm instead of Dijkstra's
+      # A* is faster because it uses heuristics to guide search
       use_astar: true
+
+      # Allow planning through unknown space (gray areas in costmap)
+      # Useful when map is not fully explored
       allow_unknown: true
 
+# ============================================================================
+# Behavior Server Configuration
+# Provides recovery behaviors (spin, backup, wait) when navigation fails
+# ============================================================================
 behavior_server:
   ros__parameters:
     use_sim_time: True
@@ -43,53 +108,87 @@ behavior_server:
     robot_base_frame: base_link
     transform_tolerance: 0.2
 
+# ============================================================================
+# Global Costmap Configuration
+# Represents the entire environment for global path planning
+# Uses the map from SLAM and adds dynamic obstacles from sensors
+# ============================================================================
 global_costmap:
   global_costmap:
     ros__parameters:
       use_sim_time: True
-      global_frame: map
+      global_frame: map  # Uses SLAM map as reference
       robot_base_frame: base_link
-      update_frequency: 1.0
-      publish_frequency: 1.0
-      resolution: 0.05
-      width: 10
-      height: 10
-      origin_x: -5.0
+
+      # Costmap update frequencies
+      update_frequency: 1.0    # Update obstacles every second
+      publish_frequency: 1.0   # Publish costmap every second
+
+      # Grid resolution and size
+      resolution: 0.05  # 5cm per cell
+      width: 10         # 10 meters wide (200 cells)
+      height: 10        # 10 meters tall (200 cells)
+      origin_x: -5.0    # Center the costmap on robot start position
       origin_y: -5.0
+
+      # Static costmap - does not move with robot
       rolling_window: false
+
+      # Costmap layers (processed in order)
       plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
+
+      # Static layer: loads map from SLAM
       static_layer:
         plugin: "nav2_costmap_2d::StaticLayer"
-        map_subscribe_transient_local: True
+        map_subscribe_transient_local: True  # Reliable QoS for map topic
+
+      # Obstacle layer: adds dynamic obstacles from laser scan
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
         enabled: True
-        observation_sources: scan
+        observation_sources: scan  # Use laser scan data
         scan:
-          topic: /scan
-          max_obstacle_height: 2.0
-          clearing: True
-          marking: True
+          topic: /scan             # LaserScan topic
+          max_obstacle_height: 2.0 # Maximum height to consider (meters)
+          clearing: True           # Clear obstacles when no longer detected
+          marking: True            # Mark new obstacles when detected
+
+      # Inflation layer: expands obstacles by robot radius + safety margin
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
-        cost_scaling_factor: 3.0
-        inflation_radius: 0.55
+        cost_scaling_factor: 3.0    # How quickly cost increases from obstacle
+        inflation_radius: 0.55      # Expand obstacles by 55cm
 
+# ============================================================================
+# Local Costmap Configuration
+# Smaller rolling window around robot for local trajectory planning
+# Updates more frequently than global costmap for reactive control
+# ============================================================================
 local_costmap:
   local_costmap:
     ros__parameters:
       use_sim_time: True
-      global_frame: odom
+      global_frame: odom  # Uses odometry frame (more stable for local planning)
       robot_base_frame: base_link
-      update_frequency: 5.0
-      publish_frequency: 2.0
-      resolution: 0.05
-      width: 3
-      height: 3
-      origin_x: -1.5
+
+      # Higher update frequencies for reactive obstacle avoidance
+      update_frequency: 5.0    # Update every 200ms
+      publish_frequency: 2.0   # Publish every 500ms
+
+      # Smaller, high-resolution costmap
+      resolution: 0.05  # 5cm per cell (same as global)
+      width: 3          # 3 meters wide
+      height: 3         # 3 meters tall
+      origin_x: -1.5    # Center on robot
       origin_y: -1.5
+
+      # Rolling window follows robot as it moves
       rolling_window: true
+
+      # Only obstacle and inflation layers (no static map)
+      # Local costmap updates obstacles in real-time
       plugins: ["obstacle_layer", "inflation_layer"]
+
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
         enabled: True
@@ -99,6 +198,7 @@ local_costmap:
           max_obstacle_height: 2.0
           clearing: True
           marking: True
+
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 3.0
