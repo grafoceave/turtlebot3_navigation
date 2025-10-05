@@ -13,17 +13,16 @@ This project provides a production-ready autonomous navigation system that combi
 ### System Architecture
 
 Terminal 1: Gazebo
-bash
 export TURTLEBOT3_MODEL=burger
 ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
+
 Terminal 2: Cartographer SLAM
 
-bash
 export TURTLEBOT3_MODEL=burger
 ros2 launch turtlebot3_cartographer cartographer.launch.py use_sim_time:=True
+
 Terminal 3: RViz
 
-bash
 export TURTLEBOT3_MODEL=burger
 ros2 run rviz2 rviz2
 Set Fixed Frame to map
@@ -34,12 +33,13 @@ Add /scan display
 
 Add RobotModel display
 
-Terminal 4: Navigation Stack
+Terminal 4: Teleop first to map the environment for 2-3 minutes
+ros2 run turtlebot3_teleop teleop_keyboard
+Then
+Navigation Stack:
 
-bash
 export TURTLEBOT3_MODEL=burger
 ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True
 Terminal 5: Waypoint Navigation
 
-bash
 python3 ~/nav_10_waypoints_final.py
