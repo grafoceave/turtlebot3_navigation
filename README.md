@@ -1,27 +1,5 @@
 # TurtleBot3 Navigation with Cartographer SLAM
 
-Complete autonomous navigation system for TurtleBot3 using ROS 2 Jazzy, Cartographer SLAM for real-time mapping, and Nav2 for path planning and waypoint navigation.
-
-![ROS 2 Jazzy](https://img.shields.io/badge/ROS%202-Jazzy-blue)
-![TurtleBot3](https://img.shields.io/badge/Robot-TurtleBot3%20Burger-green)
-![SLAM](https://img.shields.io/badge/SLAM-Cartographer-orange)
-![Nav2](https://img.shields.io/badge/Navigation-Nav2-red)
-
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [System Requirements](#system-requirements)
-- [Installation](#installation)
-- [Quick Start Guide](#quick-start-guide)
-- [Manual Launch (5 Terminals)](#manual-launch-5-terminals)
-- [RViz Configuration](#rviz-configuration)
-- [Waypoint Navigation](#waypoint-navigation)
-- [Customizing Waypoints](#customizing-waypoints)
-- [Troubleshooting](#troubleshooting)
-- [Advanced Features](#advanced-features)
-- [File Structure](#file-structure)
-
 ## 🎯 Overview
 
 This project provides a production-ready autonomous navigation system that combines:
