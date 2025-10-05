@@ -1,0 +1,22 @@
+[7.328s] Invoking command in '/home/anurag-mittal/nav2_slam_ws/src/turtlebot_nav2_slam': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/anurag-mittal/nav2_slam_ws/build/turtlebot_nav2_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtlebot_nav2_slam build --build-base /home/anurag-mittal/nav2_slam_ws/build/turtlebot_nav2_slam/build install --record /home/anurag-mittal/nav2_slam_ws/build/turtlebot_nav2_slam/install.log --single-version-externally-managed install_data
+[9.169s] running egg_info
+[9.348s] writing ../../build/turtlebot_nav2_slam/turtlebot_nav2_slam.egg-info/PKG-INFO
+[9.350s] writing dependency_links to ../../build/turtlebot_nav2_slam/turtlebot_nav2_slam.egg-info/dependency_links.txt
+[9.351s] writing entry points to ../../build/turtlebot_nav2_slam/turtlebot_nav2_slam.egg-info/entry_points.txt
+[9.353s] writing requirements to ../../build/turtlebot_nav2_slam/turtlebot_nav2_slam.egg-info/requires.txt
+[9.354s] writing top-level names to ../../build/turtlebot_nav2_slam/turtlebot_nav2_slam.egg-info/top_level.txt
+[9.616s] reading manifest file '../../build/turtlebot_nav2_slam/turtlebot_nav2_slam.egg-info/SOURCES.txt'
+[9.621s] writing manifest file '../../build/turtlebot_nav2_slam/turtlebot_nav2_slam.egg-info/SOURCES.txt'
+[9.622s] running build
+[9.622s] running build_py
+[9.623s] running install
+[9.659s] running install_lib
+[9.784s] running install_data
+[9.785s] copying launch/nav_twist_only.py -> /home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/share/turtlebot_nav2_slam/launch
+[9.786s] running install_egg_info
+[9.927s] removing '/home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/lib/python3.12/site-packages/turtlebot_nav2_slam-1.0.0-py3.12.egg-info' (and everything under it)
+[9.928s] Copying ../../build/turtlebot_nav2_slam/turtlebot_nav2_slam.egg-info to /home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/lib/python3.12/site-packages/turtlebot_nav2_slam-1.0.0-py3.12.egg-info
+[9.932s] running install_scripts
+[10.875s] Installing waypoint_navigator script to /home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/lib/turtlebot_nav2_slam
+[10.878s] writing list of installed files to '/home/anurag-mittal/nav2_slam_ws/build/turtlebot_nav2_slam/install.log'
+[11.107s] Invoked command in '/home/anurag-mittal/nav2_slam_ws/src/turtlebot_nav2_slam' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/anurag-mittal/nav2_slam_ws/build/turtlebot_nav2_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtlebot_nav2_slam build --build-base /home/anurag-mittal/nav2_slam_ws/build/turtlebot_nav2_slam/build install --record /home/anurag-mittal/nav2_slam_ws/build/turtlebot_nav2_slam/install.log --single-version-externally-managed install_data

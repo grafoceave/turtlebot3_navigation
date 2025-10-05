@@ -1,0 +1,2 @@
+[console_scripts]
+waypoint_navigator = turtlebot_nav2_slam.waypoint_navigator:main

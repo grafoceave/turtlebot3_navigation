@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: turtlebot-nav2-slam
+Version: 1.0.0
+Summary: Nav2 SLAM Navigation
+Maintainer: Your Name
+Maintainer-email: your.email@example.com
+License: Apache-2.0

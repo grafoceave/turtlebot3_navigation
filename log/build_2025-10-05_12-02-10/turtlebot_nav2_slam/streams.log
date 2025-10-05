@@ -1,0 +1,41 @@
+[7.312s] Invoking command in '/home/anurag-mittal/nav2_slam_ws/src/turtlebot_nav2_slam': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/anurag-mittal/nav2_slam_ws/build/turtlebot_nav2_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtlebot_nav2_slam build --build-base /home/anurag-mittal/nav2_slam_ws/build/turtlebot_nav2_slam/build install --record /home/anurag-mittal/nav2_slam_ws/build/turtlebot_nav2_slam/install.log --single-version-externally-managed install_data
+[8.563s] running egg_info
+[8.564s] creating ../../build/turtlebot_nav2_slam/turtlebot_nav2_slam.egg-info
+[8.642s] writing ../../build/turtlebot_nav2_slam/turtlebot_nav2_slam.egg-info/PKG-INFO
+[8.644s] writing dependency_links to ../../build/turtlebot_nav2_slam/turtlebot_nav2_slam.egg-info/dependency_links.txt
+[8.647s] writing entry points to ../../build/turtlebot_nav2_slam/turtlebot_nav2_slam.egg-info/entry_points.txt
+[8.649s] writing requirements to ../../build/turtlebot_nav2_slam/turtlebot_nav2_slam.egg-info/requires.txt
+[8.651s] writing top-level names to ../../build/turtlebot_nav2_slam/turtlebot_nav2_slam.egg-info/top_level.txt
+[8.653s] writing manifest file '../../build/turtlebot_nav2_slam/turtlebot_nav2_slam.egg-info/SOURCES.txt'
+[8.849s] reading manifest file '../../build/turtlebot_nav2_slam/turtlebot_nav2_slam.egg-info/SOURCES.txt'
+[8.852s] writing manifest file '../../build/turtlebot_nav2_slam/turtlebot_nav2_slam.egg-info/SOURCES.txt'
+[8.853s] running build
+[8.858s] running build_py
+[8.870s] creating /home/anurag-mittal/nav2_slam_ws/build/turtlebot_nav2_slam/build
+[8.871s] creating /home/anurag-mittal/nav2_slam_ws/build/turtlebot_nav2_slam/build/lib
+[8.872s] creating /home/anurag-mittal/nav2_slam_ws/build/turtlebot_nav2_slam/build/lib/turtlebot_nav2_slam
+[8.872s] copying turtlebot_nav2_slam/__init__.py -> /home/anurag-mittal/nav2_slam_ws/build/turtlebot_nav2_slam/build/lib/turtlebot_nav2_slam
+[8.872s] running install
+[8.895s] running install_lib
+[9.030s] creating /home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/lib/python3.12/site-packages/turtlebot_nav2_slam
+[9.031s] copying /home/anurag-mittal/nav2_slam_ws/build/turtlebot_nav2_slam/build/lib/turtlebot_nav2_slam/__init__.py -> /home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/lib/python3.12/site-packages/turtlebot_nav2_slam
+[9.034s] byte-compiling /home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/lib/python3.12/site-packages/turtlebot_nav2_slam/__init__.py to __init__.cpython-312.pyc
+[9.036s] running install_data
+[9.038s] creating /home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/share/ament_index
+[9.039s] creating /home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/share/ament_index/resource_index
+[9.039s] creating /home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/share/ament_index/resource_index/packages
+[9.040s] copying resource/turtlebot_nav2_slam -> /home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/share/ament_index/resource_index/packages
+[9.040s] copying package.xml -> /home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/share/turtlebot_nav2_slam
+[9.043s] creating /home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/share/turtlebot_nav2_slam/launch
+[9.044s] copying launch/nav2_slam_launch.py -> /home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/share/turtlebot_nav2_slam/launch
+[9.044s] creating /home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/share/turtlebot_nav2_slam/config
+[9.044s] copying config/nav2_params.yaml -> /home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/share/turtlebot_nav2_slam/config
+[9.045s] copying config/slam_params.yaml -> /home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/share/turtlebot_nav2_slam/config
+[9.045s] creating /home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/share/turtlebot_nav2_slam/scripts
+[9.046s] copying scripts/waypoint_navigator.py -> /home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/share/turtlebot_nav2_slam/scripts
+[9.046s] running install_egg_info
+[9.147s] Copying ../../build/turtlebot_nav2_slam/turtlebot_nav2_slam.egg-info to /home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/lib/python3.12/site-packages/turtlebot_nav2_slam-1.0.0-py3.12.egg-info
+[9.150s] running install_scripts
+[9.731s] Installing waypoint_navigator script to /home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/lib/turtlebot_nav2_slam
+[9.734s] writing list of installed files to '/home/anurag-mittal/nav2_slam_ws/build/turtlebot_nav2_slam/install.log'
+[9.934s] Invoked command in '/home/anurag-mittal/nav2_slam_ws/src/turtlebot_nav2_slam' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/anurag-mittal/nav2_slam_ws/build/turtlebot_nav2_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtlebot_nav2_slam build --build-base /home/anurag-mittal/nav2_slam_ws/build/turtlebot_nav2_slam/build install --record /home/anurag-mittal/nav2_slam_ws/build/turtlebot_nav2_slam/install.log --single-version-externally-managed install_data

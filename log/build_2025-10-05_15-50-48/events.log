@@ -1,0 +1,130 @@
+[0.000000] (-) TimerEvent: {}
+[0.003412] (turtlebot_nav2_slam) JobQueued: {'identifier': 'turtlebot_nav2_slam', 'dependencies': OrderedDict()}
+[0.009391] (turtlebot_nav2_slam) JobStarted: {'identifier': 'turtlebot_nav2_slam'}
+[0.099315] (-) TimerEvent: {}
+[0.201908] (-) TimerEvent: {}
+[0.302661] (-) TimerEvent: {}
+[0.405051] (-) TimerEvent: {}
+[0.506453] (-) TimerEvent: {}
+[0.607471] (-) TimerEvent: {}
+[0.709462] (-) TimerEvent: {}
+[0.813217] (-) TimerEvent: {}
+[0.915340] (-) TimerEvent: {}
+[1.017599] (-) TimerEvent: {}
+[1.119226] (-) TimerEvent: {}
+[1.220399] (-) TimerEvent: {}
+[1.322314] (-) TimerEvent: {}
+[1.425291] (-) TimerEvent: {}
+[1.529768] (-) TimerEvent: {}
+[1.631887] (-) TimerEvent: {}
+[1.732759] (-) TimerEvent: {}
+[1.833310] (-) TimerEvent: {}
+[1.937115] (-) TimerEvent: {}
+[2.041639] (-) TimerEvent: {}
+[2.142405] (-) TimerEvent: {}
+[2.244843] (-) TimerEvent: {}
+[2.345662] (-) TimerEvent: {}
+[2.446703] (-) TimerEvent: {}
+[2.548124] (-) TimerEvent: {}
+[2.649543] (-) TimerEvent: {}
+[2.750724] (-) TimerEvent: {}
+[2.852219] (-) TimerEvent: {}
+[2.955534] (-) TimerEvent: {}
+[3.056284] (-) TimerEvent: {}
+[3.157102] (-) TimerEvent: {}
+[3.257802] (-) TimerEvent: {}
+[3.358469] (-) TimerEvent: {}
+[3.459167] (-) TimerEvent: {}
+[3.560152] (-) TimerEvent: {}
+[3.660842] (-) TimerEvent: {}
+[3.762005] (-) TimerEvent: {}
+[3.863526] (-) TimerEvent: {}
+[3.965813] (-) TimerEvent: {}
+[4.066869] (-) TimerEvent: {}
+[4.167711] (-) TimerEvent: {}
+[4.270011] (-) TimerEvent: {}
+[4.373010] (-) TimerEvent: {}
+[4.474896] (-) TimerEvent: {}
+[4.576087] (-) TimerEvent: {}
+[4.679776] (-) TimerEvent: {}
+[4.782571] (-) TimerEvent: {}
+[4.886496] (-) TimerEvent: {}
+[4.987698] (-) TimerEvent: {}
+[5.090198] (-) TimerEvent: {}
+[5.192700] (-) TimerEvent: {}
+[5.294068] (-) TimerEvent: {}
+[5.394895] (-) TimerEvent: {}
+[5.497535] (-) TimerEvent: {}
+[5.606095] (-) TimerEvent: {}
+[5.709104] (-) TimerEvent: {}
+[5.810509] (-) TimerEvent: {}
+[5.911910] (-) TimerEvent: {}
+[6.013127] (-) TimerEvent: {}
+[6.116103] (-) TimerEvent: {}
+[6.219540] (-) TimerEvent: {}
+[6.322594] (-) TimerEvent: {}
+[6.425063] (-) TimerEvent: {}
+[6.525692] (turtlebot_nav2_slam) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/turtlebot_nav2_slam', 'build', '--build-base', '/home/anurag-mittal/nav2_slam_ws/build/turtlebot_nav2_slam/build', 'install', '--record', '/home/anurag-mittal/nav2_slam_ws/build/turtlebot_nav2_slam/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/anurag-mittal/nav2_slam_ws/src/turtlebot_nav2_slam', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'anurag-mittal', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib:/home/anurag-mittal/acados/lib:', 'ACADOS_SOURCE_DIR': '/home/anurag-mittal/acados', 'HOME': '/home/anurag-mittal', 'OLDPWD': '/home/anurag-mittal/nav2_slam_ws/src/turtlebot_nav2_slam', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '85495', 'SYSTEMD_EXEC_PID': '86109', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '89975', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/anurag-mittal/turtlebot_trajectory_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'anurag-mittal', 'JOURNAL_STREAM': '9:38084150', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'anurag-mittal', 'TERM': 'xterm-256color', 'GAZEBO_MODEL_PATH': ':/opt/ros/jazzy/share/turtlebot3_gazebo/models:/opt/ros/jazzy/share/turtlebot3_gazebo/models:/opt/ros/jazzy/share/turtlebot3_gazebo/models', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/anurag-mittal/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/anurag-mittal-GF63-Thin-9SC:@/tmp/.ICE-unix/85955,unix/anurag-mittal-GF63-Thin-9SC:/tmp/.ICE-unix/85955', 'INVOCATION_ID': '377d991039474c39b378f106fdfc7d8f', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '30', 'AMENT_PREFIX_PATH': '/home/anurag-mittal/turtlebot_trajectory_ws/install/msgs_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:3ab60e04-f550-43a3-8d7e-e69993a3dd3a', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/anurag-mittal/nav2_slam_ws/build/turtlebot_nav2_slam', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'RCUTILS_COLORIZED_OUTPUT': '1', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/anurag-mittal/nav2_slam_ws/build/turtlebot_nav2_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'ACADOS_INSTALL_DIR': '/home/anurag-mittal/acados', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[6.538567] (-) TimerEvent: {}
+[6.640979] (-) TimerEvent: {}
+[6.744282] (-) TimerEvent: {}
+[6.845540] (-) TimerEvent: {}
+[6.946311] (-) TimerEvent: {}
+[7.047838] (-) TimerEvent: {}
+[7.148714] (-) TimerEvent: {}
+[7.252104] (-) TimerEvent: {}
+[7.353733] (-) TimerEvent: {}
+[7.454998] (-) TimerEvent: {}
+[7.557887] (-) TimerEvent: {}
+[7.658973] (-) TimerEvent: {}
+[7.762466] (-) TimerEvent: {}
+[7.864653] (-) TimerEvent: {}
+[7.965820] (-) TimerEvent: {}
+[8.071853] (-) TimerEvent: {}
+[8.172765] (-) TimerEvent: {}
+[8.240242] (turtlebot_nav2_slam) StdoutLine: {'line': b'running egg_info\n'}
+[8.273174] (-) TimerEvent: {}
+[8.373278] (turtlebot_nav2_slam) StdoutLine: {'line': b'writing ../../build/turtlebot_nav2_slam/turtlebot_nav2_slam.egg-info/PKG-INFO\n'}
+[8.373841] (-) TimerEvent: {}
+[8.377858] (turtlebot_nav2_slam) StdoutLine: {'line': b'writing dependency_links to ../../build/turtlebot_nav2_slam/turtlebot_nav2_slam.egg-info/dependency_links.txt\n'}
+[8.380773] (turtlebot_nav2_slam) StdoutLine: {'line': b'writing entry points to ../../build/turtlebot_nav2_slam/turtlebot_nav2_slam.egg-info/entry_points.txt\n'}
+[8.382434] (turtlebot_nav2_slam) StdoutLine: {'line': b'writing requirements to ../../build/turtlebot_nav2_slam/turtlebot_nav2_slam.egg-info/requires.txt\n'}
+[8.383565] (turtlebot_nav2_slam) StdoutLine: {'line': b'writing top-level names to ../../build/turtlebot_nav2_slam/turtlebot_nav2_slam.egg-info/top_level.txt\n'}
+[8.474467] (-) TimerEvent: {}
+[8.575791] (-) TimerEvent: {}
+[8.680500] (-) TimerEvent: {}
+[8.781787] (-) TimerEvent: {}
+[8.792019] (turtlebot_nav2_slam) StdoutLine: {'line': b"reading manifest file '../../build/turtlebot_nav2_slam/turtlebot_nav2_slam.egg-info/SOURCES.txt'\n"}
+[8.796694] (turtlebot_nav2_slam) StdoutLine: {'line': b"writing manifest file '../../build/turtlebot_nav2_slam/turtlebot_nav2_slam.egg-info/SOURCES.txt'\n"}
+[8.799988] (turtlebot_nav2_slam) StdoutLine: {'line': b'running build\n'}
+[8.800770] (turtlebot_nav2_slam) StdoutLine: {'line': b'running build_py\n'}
+[8.801158] (turtlebot_nav2_slam) StdoutLine: {'line': b'running install\n'}
+[8.838454] (turtlebot_nav2_slam) StdoutLine: {'line': b'running install_lib\n'}
+[8.882064] (-) TimerEvent: {}
+[8.980213] (turtlebot_nav2_slam) StdoutLine: {'line': b'running install_data\n'}
+[8.982222] (turtlebot_nav2_slam) StdoutLine: {'line': b'copying config/nav2_costmap.yaml -> /home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/share/turtlebot_nav2_slam/config\n'}
+[8.983079] (-) TimerEvent: {}
+[8.985756] (turtlebot_nav2_slam) StdoutLine: {'line': b'running install_egg_info\n'}
+[9.083279] (-) TimerEvent: {}
+[9.141435] (turtlebot_nav2_slam) StdoutLine: {'line': b"removing '/home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/lib/python3.12/site-packages/turtlebot_nav2_slam-1.0.0-py3.12.egg-info' (and everything under it)\n"}
+[9.143989] (turtlebot_nav2_slam) StdoutLine: {'line': b'Copying ../../build/turtlebot_nav2_slam/turtlebot_nav2_slam.egg-info to /home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/lib/python3.12/site-packages/turtlebot_nav2_slam-1.0.0-py3.12.egg-info\n'}
+[9.148661] (turtlebot_nav2_slam) StdoutLine: {'line': b'running install_scripts\n'}
+[9.183639] (-) TimerEvent: {}
+[9.288716] (-) TimerEvent: {}
+[9.389473] (-) TimerEvent: {}
+[9.497735] (-) TimerEvent: {}
+[9.599949] (-) TimerEvent: {}
+[9.700690] (-) TimerEvent: {}
+[9.802598] (-) TimerEvent: {}
+[9.903611] (-) TimerEvent: {}
+[10.010067] (-) TimerEvent: {}
+[10.112609] (-) TimerEvent: {}
+[10.140488] (turtlebot_nav2_slam) StdoutLine: {'line': b'Installing waypoint_navigator script to /home/anurag-mittal/nav2_slam_ws/install/turtlebot_nav2_slam/lib/turtlebot_nav2_slam\n'}
+[10.141624] (turtlebot_nav2_slam) StdoutLine: {'line': b"writing list of installed files to '/home/anurag-mittal/nav2_slam_ws/build/turtlebot_nav2_slam/install.log'\n"}
+[10.213230] (-) TimerEvent: {}
+[10.316900] (-) TimerEvent: {}
+[10.417853] (-) TimerEvent: {}
+[10.499199] (turtlebot_nav2_slam) CommandEnded: {'returncode': 0}
+[10.518335] (-) TimerEvent: {}
+[10.612648] (turtlebot_nav2_slam) JobEnded: {'identifier': 'turtlebot_nav2_slam', 'rc': 0}
+[10.617660] (-) EventReactorShutdown: {}
