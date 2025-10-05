@@ -1,29 +1,90 @@
+# SLAM Toolbox Configuration for TurtleBot3
+# SLAM Toolbox provides online (real-time) SLAM using graph optimization
+# It's an alternative to Cartographer with different performance characteristics
+
 slam_toolbox:
   ros__parameters:
+    # Use simulated time from Gazebo instead of system clock
+    # CRITICAL: Must match simulation environment setting
     use_sim_time: true
-    odom_frame: odom
-    map_frame: map
-    base_frame: base_footprint
+
+    # Transform frame configuration defines the TF tree structure
+    # SLAM publishes map->odom transform, completing: map->odom->base_footprint->base_link
+    odom_frame: odom           # Odometry frame (provided by robot/simulation)
+    map_frame: map             # Global map frame (created by SLAM)
+    base_frame: base_footprint # Robot's base frame (center of rotation)
+
+    # Laser scan topic to subscribe to for SLAM input
+    # TurtleBot3 publishes 360-degree LiDAR data here
     scan_topic: /scan
+
+    # SLAM mode: 'mapping' creates new maps, 'localization' uses existing maps
     mode: mapping
-    
+
+    # Disable debug logging for cleaner terminal output
+    # Set to true for detailed SLAM algorithm diagnostics
     debug_logging: false
+
+    # Scan throttling: 1 = use every scan, 2 = use every other scan, etc.
+    # Higher values reduce computational load but decrease map quality
     throttle_scans: 1
-    transform_publish_period: 0.02
-    map_update_interval: 1.0
+
+    # How often to publish the map->odom transform (in seconds)
+    # Higher frequency (lower period) improves transform accuracy for fast motions
+    transform_publish_period: 0.02  # 50 Hz
+
+    # How often to update and publish the map (in seconds)
+    # Lower frequency reduces CPU load but makes map updates less responsive
+    map_update_interval: 1.0  # 1 Hz
+
+    # Map resolution in meters per pixel
+    # 0.05 = 5cm per pixel, good balance between detail and file size
     resolution: 0.05
+
+    # Maximum range to consider for laser scans (in meters)
+    # Values beyond this are ignored (filters out infinite/max range readings)
     max_laser_range: 20.0
+
+    # Minimum time between processing scans (in seconds)
+    # Prevents processing scans too frequently when robot is stationary
     minimum_time_interval: 0.5
-    
+
+    # Optimization solver configuration
+    # Ceres is a powerful nonlinear least squares solver from Google
     solver_plugin: solver_plugins::CeresSolver
+
+    # Linear solver algorithm for Ceres
+    # SPARSE_NORMAL_CHOLESKY is efficient for SLAM's sparse pose graphs
     ceres_linear_solver: SPARSE_NORMAL_CHOLESKY
+
+    # Preconditioner improves convergence speed
+    # SCHUR_JACOBI works well for SLAM's structure
     ceres_preconditioner: SCHUR_JACOBI
+
+    # Trust region strategy for optimization step size
+    # LEVENBERG_MARQUARDT balances between gradient descent and Newton's method
     ceres_trust_strategy: LEVENBERG_MARQUARDT
-    
+
+    # Enable scan matching for better odometry correction
+    # Aligns consecutive scans to improve pose estimates
     use_scan_matching: true
+
+    # Use the centroid (barycenter) of scan points for matching
+    # More robust to partial occlusions and scan variations
     use_scan_barycenter: true
+
+    # Minimum distance robot must travel before adding a new pose node (in meters)
+    # Prevents adding too many nodes when robot is stationary or moving slowly
     minimum_travel_distance: 0.2
+
+    # Minimum rotation robot must make before adding a new pose node (in radians)
+    # ~11.5 degrees - prevents nodes during pure translation
     minimum_travel_heading: 0.2
-    
+
+    # Enable loop closure detection
+    # Corrects accumulated drift when robot revisits previously mapped areas
     do_loop_closing: true
+
+    # Maximum distance to search for loop closures (in meters)
+    # Larger values increase robustness but add computational cost
     loop_search_maximum_distance: 3.0
